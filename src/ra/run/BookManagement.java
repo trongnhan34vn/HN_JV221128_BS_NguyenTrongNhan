@@ -146,7 +146,6 @@ public class BookManagement {
             if (selectBook != null) {
                 selectBook.setBookStatus(!selectBook.isBookStatus());
                 System.out.println("Chuyển trạng thái thành công!");
-                selectBook.displayData();
                 return;
             } else {
                 System.out.println("Không tìm thấy sách! Vui lòng nhập lại!");
