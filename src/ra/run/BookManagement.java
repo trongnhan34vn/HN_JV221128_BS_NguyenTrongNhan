@@ -138,6 +138,7 @@ public class BookManagement {
     }
 
     public static void changeBookStatus(List<Book> listBooks) {
+        displayListBooks(listBooks);
         while (true) {
             System.out.println("Nhập mã sách thay đổi trạng thái: ");
             int changeId = Integer.parseInt(scanner.nextLine());
