@@ -120,16 +120,17 @@ public class BookManagement {
             System.out.println("Nhập tên sách cần tìm kiếm: ");
             String searchBookName = scanner.nextLine();
             boolean isExist = false;
-            Book searchBook = new Book();
+            List<Book> searchBook = new ArrayList<>(listBooks);
             for (Book book : listBooks) {
                 if (book.getBookName().equalsIgnoreCase(searchBookName)) {
                     isExist = true;
-                    searchBook = book;
+//                    searchBook = book;
                     break;
                 }
             }
             if (isExist) {
-                searchBook.displayData();
+                searchBook.removeIf(book -> !book.getBookName().equalsIgnoreCase(searchBookName));
+                displayListBooks(searchBook);
                 return;
             } else {
                 System.out.println("Không tìm thấy sách! Vui lòng nhập lại!");
