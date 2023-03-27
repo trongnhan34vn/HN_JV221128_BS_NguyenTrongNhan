@@ -88,8 +88,8 @@ public class BookManagement {
     }
 
     public static void deleteById(List<Book> listBooks) {
+        displayListBooks(listBooks);
         while (true) {
-            displayListBooks(listBooks);
             System.out.println("Nhập vào mã sách cần xoá: ");
             int idDel = Integer.parseInt(scanner.nextLine());
             Book selectBook = findById(idDel, listBooks);
@@ -115,8 +115,8 @@ public class BookManagement {
     }
 
     public static void findByName(List<Book> listBooks) {
+        displayListBooks(listBooks);
         while (true) {
-            displayListBooks(listBooks);
             System.out.println("Nhập tên sách cần tìm kiếm: ");
             String searchBookName = scanner.nextLine();
             boolean isExist = false;
